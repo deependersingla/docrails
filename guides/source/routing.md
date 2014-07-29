@@ -645,6 +645,8 @@ match 'photos', to: 'photos#show', via: :all
 
 NOTE: Routing both `GET` and `POST` requests to a single action has security implications. In general, you should avoid routing all verbs to an action unless you have a good reason to.
 
+NOTE: 'GET' in rails don't check for CSRF token. According to security guideline's you should not write to database from 'GET' requests. More on [this](security.html#csrf-countermeasures)
+
 ### Segment Constraints
 
 You can use the `:constraints` option to enforce a format for a dynamic segment:
